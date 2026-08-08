@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FCF9F6;
+    --color-nude: #F3E6DF;
+    --color-mauve: #B98793;
+    --color-eucalyptus: #A8B8A5;
+    --color-espresso: #4B3E3B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-espresso);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+@utility font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+@utility font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Luxury Glassmorphism */
+.glass-card {
+  background: rgba(252, 249, 246, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(243, 230, 223, 0.8);
+}
+
+.glass-nav {
+  background: rgba(252, 249, 246, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(185, 135, 147, 0.12);
+}
+
+.glass-pill {
+  background: rgba(243, 230, 223, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(185, 135, 147, 0.2);
+}
+
+/* Subtle Shimmer & Gradient mesh animation */
+@keyframes meshShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-mesh-gradient {
+  background: linear-gradient(-45deg, #FCF9F6, #F3E6DF, #F7EFEA, #EFE2DA);
+  background-size: 300% 300%;
+  animation: meshShift 18s ease infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+@keyframes lightFlare {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(200%) translateY(200%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.animate-light-flare {
+  animation: lightFlare 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCF9F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9C3BB;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B98793;
+}
+

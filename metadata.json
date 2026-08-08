@@ -1,0 +1,6 @@
+{
+  "name": "Luxury Beauty Salon",
+  "description": "An ultra-luxurious, bespoke beauty studio experience with editorial design, soft pastel gradients, and cinematic motion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
